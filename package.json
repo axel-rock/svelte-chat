@@ -1,6 +1,6 @@
 {
   "name": "@axelrock/svelte-chat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Axel Rock",
   "scripts": {
     "dev": "vite dev",
@@ -55,5 +55,16 @@
     "@ai-sdk/groq": "^1.0.4",
     "ai": "^4.0.9",
     "dexie": "^4.0.10"
-  }
+  },
+  "description": "Librairies of components for building chat interfaces with Svelte.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axel-rock/svelte-chat.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axel-rock/svelte-chat/issues"
+  },
+  "homepage": "https://github.com/axel-rock/svelte-chat#readme"
 }
