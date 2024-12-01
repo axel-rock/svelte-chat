@@ -1,35 +1,14 @@
 <script lang="ts">
-    import type { Snippet } from 'svelte';
-    import type { LayoutData } from './$types';
-    import Dexie, { type EntityTable } from 'dexie';
+	import type { Snippet } from 'svelte'
+	import type { LayoutData } from './$types.js'
 
-    let { data, children }: { data: LayoutData, children: Snippet } = $props();
+	import '../lib/css/test.css'
 
-    // db.ts
-
-interface Message {
-  id: number;
-  name: string;
-  age: number;
-}
-
-const db = new Dexie('FriendsDatabase') as Dexie & {
-  friends: EntityTable<
-    Friend,
-    'id' // primary key "id" (for the typings only)
-  >;
-};
-
-// Schema declaration:
-db.version(1).stores({
-  friends: '++id, name, age' // primary key "id" (for the runtime!)
-});
-
-export { db };
+	let { data, children }: { data: LayoutData; children: Snippet } = $props()
 </script>
 
 <header>
-  <h1>Svelte Chat</h1>
+	<h1>Svelte Chat</h1>
 </header>
 
 {@render children()}
